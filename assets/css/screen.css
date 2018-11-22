@@ -88,7 +88,15 @@ figcaption {
   padding-left: 0; /* Don't indent everything like normal ul */
 }
 
-.job-responsibilities li,
+.course-summary li,
+.job-responsibilities li {
+  list-style: disc;
+}
+
+.course-summary li li {
+  list-style: circle;
+}
+
 #achievements li,
 #skills li {
   list-style: disc;
@@ -192,6 +200,16 @@ a:focus {
 .view-pdf:active,
 .view-pdf:focus {
   background-color: #f4f6f7; /* Light grey */
+}
+
+.nested-co-sum {
+  padding-bottom: 0;
+}
+
+.nested-co-sum ul {
+  padding-bottom: 0;
+  padding-top: 0.6111em; /* half of one lead (22), 11 / 18 = 0.61111 */
+  /* Adds space equal to the padding bottom for li for the nested list */
 }
 
 #resume h2 {
