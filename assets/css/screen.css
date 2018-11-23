@@ -224,6 +224,13 @@ a:focus {
 
 /* ==== STATE STYLES === */
 
+.js .course-summary {
+  display: none;
+}
+.js .course-summary.visible {
+  display: block;
+}
+
 @media screen and (min-width: 400px) {
   #research-day-img {
     background-color: #f4f6f7; /* Light grey */
