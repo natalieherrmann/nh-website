@@ -179,6 +179,10 @@ a:focus {
 
 /* ==== MODULAR STYLES === */
 
+.course {
+  padding-top: 0.611em; /* 18px * 120% = 21.6px, 22px / 18px = 1.222em / 2 = 0.611*/
+}
+
 .job {
   border-bottom: 0.1389em solid #00a7a7; /* Light Teal border between each job half the size of borders used for headings, 2.5px / 18 = 0.1388889 */
   padding-top: 0.61111em; /* Space between each job same as space after li */
@@ -242,8 +246,8 @@ a:focus {
 }
 
 #resume p {
-  padding-bottom: 0.5554em;
-  /* Extra spacing for this page's view-pdf, which has 0.277em padding, 0.277 * 2 = 0.5554 */
+  padding-bottom: 1.108em;
+  /* Extra spacing for this page's view-pdf, which has 0.277em padding, 0.277 * 4 = 1.108 */
 }
 
 /* ==== STATE STYLES === */
@@ -286,7 +290,7 @@ a:focus {
 
   #research-day-img {
     float: right;
-    margin-left: 2%; /* Space between picture and text */
+    margin-left: 3%; /* Space between picture and text */
     width: 40%;
   }
 
