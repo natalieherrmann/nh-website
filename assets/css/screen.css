@@ -20,6 +20,9 @@ html {
   font-family: "PT Serif", Georgia, "Lucida Bright", serif;
   font-size: 1.125em; /* 16px = 1em, 18px / 16px = 1.125em */
   line-height: 1.222em; /* 18px * 120% = 21.6px, 22px / 18px = 1.222em */
+}
+
+main {
   padding: 1.222em; /* 22px / 18px = 1.222em */
 }
 
@@ -82,10 +85,26 @@ figcaption {
 }
 
 /* ==== LAYOUT STYLES ==== */
+
+#header {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 #name {
   background-image: linear-gradient(#005959, #00a7a7);
   color: #fefefe; /* Off-white */
+  left: 0;
+  top: 0;
+  padding-left: 2%;
   text-align: center;
+  width: 98%; /* 100% width - 2% padding left */
+}
+
+#nav-bar {
+  display: block;
+  left: 0;
+  width: 100vw;
 }
 
 #education-list,
@@ -248,8 +267,9 @@ a:focus {
 }
 
 @media screen and (min-width: 600px) {
-  html {
-    padding: 1.833333em 9%; /* 54px (aka 3 typographic grid lines) / 600 = 0.09 */
+  main {
+    padding: 1.833333em 9%;
+    /* 54px (aka 3 typographic grid lines) / 600 = 0.09 */
     /* 22px + 11px / 18px = 1.833333em */
   }
 }
@@ -279,15 +299,56 @@ a:focus {
 @media screen and (min-width: 900px) {
   body {
     background-color: #fefefe; /* Off-white */
-    border-bottom: 0.2777em solid #00a7a7; /* 5px / 18px = .2777em */
-    border-top: 0.2777em solid #00a7a7; /* Light Teal */
-    margin: 0 auto 0 auto; /* Centers body on page */
-    padding: 1.833333em 5%; /* 22px + 11px / 18px = 1.833333em */
+    margin: 0 15% 0 15%; /* Centers body on page */
+
   }
 
   html {
-    background-color: #005959; /* Dark Teal */
-    margin: 0 5% 0 5%;
+    background-image: linear-gradient(to right, #005959, #00a7a7);
+    padding-top: 4.16037222em; /* Height of #name = 52.8667px + 22px / 18 = 4.16037222 */
+    position: relative;
   }
 
+  #name {
+    background: rgba(63,63,63,0.95);
+    background-image: none;
+    color: #fefefe; /* Off-white */
+    left: 0;
+    padding-left: 2%;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 98%; /* 100% - 2% padding left */
+  }
+
+  #nav-bar {
+    position: absolute;
+    left: auto;
+    top: 0;
+    right: 0;
+    padding-top: 0.57963056em; /* Height of #name = 52.8667px, height of #nav-bar = 31px */
+    /* (59.4667 - 31) / 18 = 1.1592611 / 2 (top/bottom) = 0.57963056 */
+    width: 50%;
+  }
+
+  nav > #nav-bar {
+    background: none;
+    border: none;
+  }
+
+  #nav-bar > li {
+    background: none;
+  }
+
+  #nav-bar li:hover,
+  #nav-bar li a:active,
+  #nav-bar li a:focus {
+    background-color: #446060; /* Grey-Teal */
+    color: #fefefe; /* Off-White */
+  }
+
+  #nav-bar #current a {
+    border: none;
+    color: #52c3c3;
+  }
 }
