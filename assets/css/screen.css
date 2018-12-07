@@ -126,7 +126,6 @@ figcaption {
   list-style: disc;
 }
 
-#contact-links,
 nav > #nav-bar {
   background-color: #00a7a7; /* Light Teal */
   border-bottom: solid #00a7a7 0.2777em; /* 5px / 18px = .2777em */
@@ -145,9 +144,16 @@ nav > #nav-bar {
 #contact-links > li,
 #nav-bar > li {
   background-color: #00a7a7; /* Light Teal */
-  float: left; /* Float if browser doesn't support flex */
-  margin-top: 0;
   padding: 0.2777em; /* 5px / 18px = .2777em */
+}
+
+#contact-links li {
+  margin-bottom: 0.2777em; /* 5px / 18px = .2777em */
+}
+
+#nav-bar > li {
+  float: right; /* Float if browser doesn't support flex */
+
 }
 
 a:hover,
