@@ -136,11 +136,6 @@ nav > #nav-bar {
   padding-left: 0; /* Don't indent like a normal list */
 }
 
-/* Add space between footer and content */
-#contact {
-  margin-top: 1.8333em; /* one lead (22) + half (11) = 33 / 18 = 1.8333 */
-}
-
 #contact-links > li,
 #nav-bar > li {
   background-color: #00a7a7; /* Light Teal */
@@ -165,6 +160,7 @@ a:focus {
 #contact-links a,
 #nav-bar li a {
   color: #fefefe;
+  display: block; /* Make whole li clickable, not just a */
   text-decoration: none; /* Remove underline */
 }
 
