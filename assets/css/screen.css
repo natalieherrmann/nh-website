@@ -148,7 +148,6 @@ nav > #nav-bar {
 
 #nav-bar > li {
   float: right; /* Float if browser doesn't support flex */
-
 }
 
 a:hover,
@@ -254,6 +253,29 @@ a:focus {
 
 /* ==== STATE STYLES === */
 
+.js #menu-button {
+  display: none;
+}
+
+.js #menu-button.visible {
+  background-color: #00a7a7;
+  display: block;
+  text-align: center;
+  width: 100vw;
+}
+
+.js #nav-bar {
+  display: none;
+}
+
+.js #nav-bar.visible {
+  display: flex;
+}
+
+.js #nav-bar.visible li {
+  width: 100vw;
+}
+
 @media screen and (min-width: 400px) {
   #research-day-img {
     background-color: #f4f6f7; /* Light grey */
@@ -270,6 +292,19 @@ a:focus {
     padding: 1.833333em 9%;
     /* 54px (aka 3 typographic grid lines) / 600 = 0.09 */
     /* 22px + 11px / 18px = 1.833333em */
+  }
+
+  /* Hide menu button and make sure to show all nav-bar links */
+  .js #menu-button.visible {
+    display: none;
+  }
+
+  .js #nav-bar {
+    display: flex;
+  }
+
+  .js #nav-bar.visible li {
+    width: auto; /* Overwrite 100vw width */
   }
 }
 
