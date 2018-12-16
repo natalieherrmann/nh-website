@@ -15,7 +15,7 @@
     var menu_list = document.createElement('a');
     // Change 'nojs' class for each html document to 'js'
     document.querySelector('html').className = 'js';
-    menu_list.textContent = 'Menu';
+    menu_list.textContent = '☰';
     menu_list.setAttribute('id', 'menu-button');
     menu_list.setAttribute('href', '');
     menu_list.classList.add('visible');
