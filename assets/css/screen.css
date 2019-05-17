@@ -153,6 +153,11 @@ a:focus {
   color: #00a7a7; /* Light Teal */
 }
 
+#name a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 #contact-links a,
 #nav-bar li a {
   color: #fefefe; /* Off-white */
